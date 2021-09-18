@@ -2,21 +2,87 @@
 
 exports[`List movie titles 1`] = `
 <Home>
-  <ListMovies
-    movies={
-      Array [
-        Object {
-          "id": "movie1Id",
-          "title": "movie1",
-        },
-      ]
-    }
-  >
-    <span
-      key="movie1Id"
+  <styled.div>
+    <div
+      className="sc-bdfBQB eAxuQk"
     >
-      movie1
-    </span>
-  </ListMovies>
+      <ListMovies
+        movies={
+          Array [
+            Object {
+              "genres": Array [
+                "genre1",
+                "genre2",
+              ],
+              "id": "movie1Id",
+              "title": "movie1",
+            },
+            Object {
+              "genres": Array [
+                "genre3",
+                "genre4",
+              ],
+              "id": "movie2Id",
+              "title": "movie2",
+            },
+            Object {
+              "genres": Array [
+                "genre4",
+                "genre5",
+              ],
+              "id": "movie3Id",
+              "title": "movie3",
+            },
+          ]
+        }
+      >
+        <h3>
+          genre1
+        </h3>
+        <span
+          key="movie1Id"
+        >
+          movie1
+        </span>
+        <h3>
+          genre2
+        </h3>
+        <span
+          key="movie1Id"
+        >
+          movie1
+        </span>
+        <h3>
+          genre3
+        </h3>
+        <span
+          key="movie2Id"
+        >
+          movie2
+        </span>
+        <h3>
+          genre4
+        </h3>
+        <span
+          key="movie2Id"
+        >
+          movie2
+        </span>
+        <span
+          key="movie3Id"
+        >
+          movie3
+        </span>
+        <h3>
+          genre5
+        </h3>
+        <span
+          key="movie3Id"
+        >
+          movie3
+        </span>
+      </ListMovies>
+    </div>
+  </styled.div>
 </Home>
 `;

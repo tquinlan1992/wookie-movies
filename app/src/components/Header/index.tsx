@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const SearchForm = styled.form`
   margin-top: auto;
+  margin-left: auto;
 `;
 
 const Column = styled.div`
