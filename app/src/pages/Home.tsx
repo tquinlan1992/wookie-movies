@@ -9,19 +9,15 @@ const ListMovies: React.FC<{ movies: Movie[] }> = ({ movies }) => (
   </>
 );
 
-const Home: React.FC = () => {
+const Home: React.FC<{ search: string }> = ({ search }) => {
   const [movies, setMovies] = useState<Movie[]>([]);
   useEffect(() => {
     const loadMovies = async () => {
-      setMovies(await getMovies());
+      setMovies(await getMovies(search));
     };
     loadMovies();
-  }, []);
-  return (
-    <div>
-      <ListMovies movies={movies} />
-    </div>
-  );
+  }, [search]);
+  return <ListMovies movies={movies} />;
 };
 
 export default Home;

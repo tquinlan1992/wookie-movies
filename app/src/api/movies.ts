@@ -32,11 +32,12 @@ export interface Movie {
   title: string;
 }
 
-export const getMovies = async () => {
+export const getMovies = async (search: string) => {
   const moviesResponse = await axios.get<{ movies: Movie[] }>(
-    "https://wookie.codesubmit.io/movies?q=",
+    "https://wookie.codesubmit.io/movies",
     {
       headers: { Authorization: "Bearer Wookie2021" },
+      params: { q: search },
     }
   );
   return moviesResponse.data.movies;
