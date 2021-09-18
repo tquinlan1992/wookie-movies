@@ -1,6 +1,6 @@
 import { configure, mount } from "enzyme";
-import App from "./App";
-import * as moviesApi from "./api/movies";
+import Home from "./Home";
+import * as moviesApi from "../api/movies";
 import toJson from "enzyme-to-json";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { act } from "react-dom/test-utils";
@@ -20,7 +20,7 @@ test("List movie titles", async () => {
     .mockReturnValue(
       Promise.resolve([{ title: "movie1", id: "movie1Id" } as moviesApi.Movie])
     );
-  const wrapper = mount(<App />);
+  const wrapper = mount(<Home />);
   await waitForComponentToPaint(wrapper);
   expect(toJson(wrapper)).toMatchSnapshot();
   expect(getMoviesSpy).toHaveBeenCalled();

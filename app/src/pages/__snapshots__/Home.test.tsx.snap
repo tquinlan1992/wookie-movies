@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List movie titles 1`] = `
+<Home>
+  <ListMovies
+    movies={
+      Array [
+        Object {
+          "id": "movie1Id",
+          "title": "movie1",
+        },
+      ]
+    }
+  >
+    <span
+      key="movie1Id"
+    >
+      movie1
+    </span>
+  </ListMovies>
+</Home>
+`;

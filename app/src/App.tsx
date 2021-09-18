@@ -1,42 +1,14 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import { getMovies, Movie } from "./api/movies";
-
-const ListMovies: React.FC<{ movies: Movie[] }> = ({ movies }) => (
-  <>
-    {movies.map((movie) => (
-      <span key={movie.id}>{movie.title}</span>
-    ))}
-  </>
-);
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 const App: React.FC = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
-  useEffect(() => {
-    const loadMovies = async () => {
-      setMovies(await getMovies());
-    };
-    loadMovies();
-  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <ListMovies movies={movies} />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Home />
+    </>
   );
 };
 
