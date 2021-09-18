@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const SearchInput = styled.input`
+const SearchForm = styled.form`
   margin-top: auto;
 `;
 
@@ -45,12 +45,12 @@ const Header: React.FC<{ onSearch: (search: string) => void }> = ({
           <span>Movies</span>
         </Column>
         <Column>
-          <form onSubmit={performSearch}>
-            <SearchInput
+          <SearchForm onSubmit={performSearch}>
+            <input
               value={searchInputValue}
               onChange={(event) => onSearchInputChange(event.target.value)}
             />
-          </form>
+          </SearchForm>
         </Column>
       </HeaderColumns>
     </HeaderWrapper>

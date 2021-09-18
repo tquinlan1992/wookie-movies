@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header 1`] = `
+<Header
+  onSearch={[MockFunction]}
+>
+  <styled.div>
+    <div
+      className="sc-dlfnuX kTvNJn"
+    >
+      <styled.div>
+        <div
+          className="sc-hKgJUU eSwVWB"
+        >
+          <styled.div>
+            <div
+              className="sc-gsTEea gEuHtg"
+            >
+              <span>
+                Wookie
+              </span>
+              <span>
+                Movies
+              </span>
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-gsTEea gEuHtg"
+            >
+              <styled.form
+                onSubmit={[Function]}
+              >
+                <form
+                  className="sc-bdfBQB cnyZBS"
+                  onSubmit={[Function]}
+                >
+                  <input
+                    onChange={[Function]}
+                    value=""
+                  />
+                </form>
+              </styled.form>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Header>
+`;
