@@ -1,88 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List movie titles 1`] = `
-<Home>
-  <styled.div>
-    <div
-      className="sc-bdfBQB eAxuQk"
-    >
-      <ListMovies
-        movies={
-          Array [
-            Object {
-              "genres": Array [
-                "genre1",
-                "genre2",
-              ],
-              "id": "movie1Id",
-              "title": "movie1",
-            },
-            Object {
-              "genres": Array [
-                "genre3",
-                "genre4",
-              ],
-              "id": "movie2Id",
-              "title": "movie2",
-            },
-            Object {
-              "genres": Array [
-                "genre4",
-                "genre5",
-              ],
-              "id": "movie3Id",
-              "title": "movie3",
-            },
-          ]
-        }
-      >
-        <h3>
-          genre1
-        </h3>
-        <span
-          key="movie1Id"
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Home>
+      <styled.div>
+        <div
+          className="sc-bdfBQB eAxuQk"
         >
-          movie1
-        </span>
-        <h3>
-          genre2
-        </h3>
-        <span
-          key="movie1Id"
-        >
-          movie1
-        </span>
-        <h3>
-          genre3
-        </h3>
-        <span
-          key="movie2Id"
-        >
-          movie2
-        </span>
-        <h3>
-          genre4
-        </h3>
-        <span
-          key="movie2Id"
-        >
-          movie2
-        </span>
-        <span
-          key="movie3Id"
-        >
-          movie3
-        </span>
-        <h3>
-          genre5
-        </h3>
-        <span
-          key="movie3Id"
-        >
-          movie3
-        </span>
-      </ListMovies>
-    </div>
-  </styled.div>
-</Home>
+          <MoviesList
+            movies={
+              Array [
+                Object {
+                  "genres": Array [
+                    "genre1",
+                    "genre2",
+                  ],
+                  "id": "movie1Id",
+                  "title": "movie1",
+                },
+                Object {
+                  "genres": Array [
+                    "genre3",
+                    "genre4",
+                  ],
+                  "id": "movie2Id",
+                  "title": "movie2",
+                },
+                Object {
+                  "genres": Array [
+                    "genre4",
+                    "genre5",
+                  ],
+                  "id": "movie3Id",
+                  "title": "movie3",
+                },
+              ]
+            }
+          >
+            <h3>
+              genre1
+            </h3>
+            <Link
+              key="movie1Id"
+              to="/movies/movie1/movie1Id"
+            >
+              <LinkAnchor
+                href="/movies/movie1/movie1Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie1/movie1Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie1
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <h3>
+              genre2
+            </h3>
+            <Link
+              key="movie1Id"
+              to="/movies/movie1/movie1Id"
+            >
+              <LinkAnchor
+                href="/movies/movie1/movie1Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie1/movie1Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie1
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <h3>
+              genre3
+            </h3>
+            <Link
+              key="movie2Id"
+              to="/movies/movie2/movie2Id"
+            >
+              <LinkAnchor
+                href="/movies/movie2/movie2Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie2/movie2Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie2
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <h3>
+              genre4
+            </h3>
+            <Link
+              key="movie2Id"
+              to="/movies/movie2/movie2Id"
+            >
+              <LinkAnchor
+                href="/movies/movie2/movie2Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie2/movie2Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie2
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              key="movie3Id"
+              to="/movies/movie3/movie3Id"
+            >
+              <LinkAnchor
+                href="/movies/movie3/movie3Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie3/movie3Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie3
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <h3>
+              genre5
+            </h3>
+            <Link
+              key="movie3Id"
+              to="/movies/movie3/movie3Id"
+            >
+              <LinkAnchor
+                href="/movies/movie3/movie3Id"
+                navigate={[Function]}
+              >
+                <a
+                  href="/movies/movie3/movie3Id"
+                  onClick={[Function]}
+                >
+                  <p>
+                    movie3
+                  </p>
+                </a>
+              </LinkAnchor>
+            </Link>
+          </MoviesList>
+        </div>
+      </styled.div>
+    </Home>
+  </Router>
+</BrowserRouter>
 `;

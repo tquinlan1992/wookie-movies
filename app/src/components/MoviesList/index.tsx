@@ -1,6 +1,8 @@
 import _ from "lodash";
 import React from "react";
+import { Link } from "react-router-dom";
 import { Movie } from "../../api/movies";
+import { toPaths } from "../../pages/routes/paths";
 
 const groupMoviesByGenre = (movies: Movie[]) =>
   movies.reduce<{ [key: string]: Movie[] }>((result, movie) => {
@@ -10,7 +12,7 @@ const groupMoviesByGenre = (movies: Movie[]) =>
     return result;
   }, {});
 
-const ListMovies: React.FC<{ movies: Movie[] }> = ({ movies }) => {
+const MoviesList: React.FC<{ movies: Movie[] }> = ({ movies }) => {
   const moviesGroupedByGenre = groupMoviesByGenre(movies);
   return (
     <>
@@ -19,7 +21,12 @@ const ListMovies: React.FC<{ movies: Movie[] }> = ({ movies }) => {
           <React.Fragment key={`genre-${genre}`}>
             <h3>{genre}</h3>
             {moviesInGenre.map((movie) => (
-              <span key={movie.id}>{movie.title}</span>
+              <Link
+                to={toPaths.MOVIE_DETAILS({ id: movie.id, title: movie.title })}
+                key={movie.id}
+              >
+                <p>{movie.title}</p>
+              </Link>
             ))}
           </React.Fragment>
         );
@@ -28,4 +35,4 @@ const ListMovies: React.FC<{ movies: Movie[] }> = ({ movies }) => {
   );
 };
 
-export default ListMovies;
+export default MoviesList;

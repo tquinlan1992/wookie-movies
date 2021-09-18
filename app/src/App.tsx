@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Home from "./pages/Home";
+import Routes from "./pages/routes";
+import SearchContext from "./searchContext";
 
 const App: React.FC = () => {
   const [search, setSearch] = useState("");
   return (
-    <>
-      <Header onSearch={setSearch} />
-      <Home search={search} />
-    </>
+    <SearchContext.Provider value={{ search, setSearch }}>
+      <Header />
+      <Routes />
+    </SearchContext.Provider>
   );
 };
 

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import SearchContext from "../../searchContext";
 
 const SearchForm = styled.form`
   margin-top: auto;
@@ -27,9 +28,8 @@ const HeaderColumns = styled.div`
   width: 100%;
 `;
 
-const Header: React.FC<{ onSearch: (search: string) => void }> = ({
-  onSearch,
-}) => {
+const Header: React.FC = () => {
+  const { setSearch: onSearch } = useContext(SearchContext);
   const [searchInputValue, setSearchInputValue] = useState("");
   const onSearchInputChange = (search: string) => {
     setSearchInputValue(search);

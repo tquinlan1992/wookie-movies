@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header 1`] = `
-<Header
-  onSearch={[MockFunction]}
->
+<Header>
   <styled.div>
     <div
       className="sc-dlfnuX kTvNJn"

@@ -2,12 +2,17 @@ import { configure, mount } from "enzyme";
 import Header from "./";
 import toJson from "enzyme-to-json";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+import SearchContext from "../../searchContext";
 
 configure({ adapter: new Adapter() });
 
 test("Header", async () => {
   const onSearch = jest.fn();
-  const wrapper = mount(<Header onSearch={onSearch} />);
+  const wrapper = mount(
+    <SearchContext.Provider value={{ search: "", setSearch: onSearch }}>
+      <Header />
+    </SearchContext.Provider>
+  );
   expect(toJson(wrapper)).toMatchSnapshot();
   wrapper
     .find("input")

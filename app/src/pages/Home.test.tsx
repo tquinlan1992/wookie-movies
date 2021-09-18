@@ -5,6 +5,7 @@ import toJson from "enzyme-to-json";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import { act } from "react-dom/test-utils";
 import { Movie } from "../api/movies";
+import { BrowserRouter as Router } from "react-router-dom";
 
 configure({ adapter: new Adapter() });
 
@@ -39,7 +40,11 @@ test("List movie titles", async () => {
       }),
     ])
   );
-  const wrapper = mount(<Home />);
+  const wrapper = mount(
+    <Router>
+      <Home />
+    </Router>
+  );
   await waitForComponentToPaint(wrapper);
   expect(toJson(wrapper)).toMatchSnapshot();
   expect(getMoviesSpy).toHaveBeenCalled();
