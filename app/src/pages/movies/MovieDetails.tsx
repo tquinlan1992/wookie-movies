@@ -43,23 +43,22 @@ const Title = styled.div`
   }
 `;
 
-const MovieDetails: React.FC = () => {
-  const { title } = useParams<{ title: string }>();
+const useMovieData = () => {
+  const { id } = useParams<{ id: string }>();
   const [movieData, setMovieData] = useState<Movie>();
   useEffect(() => {
     const retriveMovie = async () => {
-      console.log("title", title);
-      const strippedTitle = _.chain(title.toLowerCase())
-        .replace("the", "")
-        .replace("all", "")
-        .replace("a ", "  ")
-        .value();
-      console.log("strippedTitle", strippedTitle);
-      const result = await getMovies(strippedTitle);
-      setMovieData(result[0]);
+      const result = await getMovies("");
+      const movieDataFromResult = result.find((movie) => movie.id === id);
+      setMovieData(movieDataFromResult);
     };
     retriveMovie();
-  }, [title]);
+  }, [id]);
+  return movieData;
+};
+
+const MovieDetails: React.FC = () => {
+  const movieData = useMovieData();
 
   if (!movieData) {
     return null;
@@ -77,11 +76,14 @@ const MovieDetails: React.FC = () => {
             <div>
               <span>
                 {new Date(movieData.released_on).getFullYear()} |{" "}
-                {movieData.length} | {movieData.director}
+                {movieData.length} |{" "}
+                {_.isArray(movieData.director)
+                  ? movieData.director.join(", ")
+                  : movieData.director}
               </span>
             </div>
             <div>
-              <span>Cast: {movieData.cast.join(" ")}</span>
+              <span>Cast: {movieData.cast.join(", ")}</span>
             </div>
             <div>
               <p>Movie Description: {movieData.overview}</p>

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render the  home  page 1`] = `
+<MovieDetails>
+  <styled.div>
+    <div
+      className="sc-bdfBQB iNDsdm"
+    >
+      <styled.div>
+        <div
+          className="sc-hKgJUU hfhdcy"
+        >
+          <styled.div>
+            <div
+              className="sc-gsTEea ilesjl"
+            >
+              <styled.img
+                alt="Poster"
+                src="movie2Poster"
+              >
+                <img
+                  alt="Poster"
+                  className="sc-eCstlR ceXWvt"
+                  src="movie2Poster"
+                />
+              </styled.img>
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-dlfnuX kQmceR"
+            >
+              <styled.div>
+                <div
+                  className="sc-jSgvzq jwgnQ"
+                >
+                  MovieDetails: 
+                  movie2
+                   (
+                  movie2Classification
+                  )
+                </div>
+              </styled.div>
+              <div>
+                <span>
+                  1998
+                   |
+                   
+                  movie2Length
+                   |
+                   
+                  director1, director2
+                </span>
+              </div>
+              <div>
+                <span>
+                  Cast: 
+                  cast1, cast2, cast3
+                </span>
+              </div>
+              <div>
+                <p>
+                  Movie Description: 
+                  movie2Overview
+                </p>
+              </div>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</MovieDetails>
+`;

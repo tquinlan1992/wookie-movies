@@ -2,7 +2,6 @@ import { configure, mount } from "enzyme";
 import Header from "./";
 import toJson from "enzyme-to-json";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
-import SearchContext from "../../searchContext";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 import { toPaths } from "../../pages/routes/paths";
