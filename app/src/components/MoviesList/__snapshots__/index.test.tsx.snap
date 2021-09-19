@@ -33,6 +33,7 @@ exports[`render movie titles 1`] = `
               "genre2",
             ],
             "id": "movie1Id",
+            "poster": "movie1Poster",
             "title": "movie1",
           },
           Object {
@@ -41,6 +42,7 @@ exports[`render movie titles 1`] = `
               "genre4",
             ],
             "id": "movie2Id",
+            "poster": "movie2Poster",
             "title": "movie2",
           },
           Object {
@@ -49,6 +51,7 @@ exports[`render movie titles 1`] = `
               "genre5",
             ],
             "id": "movie3Id",
+            "poster": "movie3Poster",
             "title": "movie3",
           },
         ]
@@ -57,126 +60,204 @@ exports[`render movie titles 1`] = `
       <h3>
         genre1
       </h3>
-      <Link
+      <MovieDisplay
+        id="movie1Id"
         key="movie1Id"
-        to="/movies/movie1/movie1Id"
+        poster="movie1Poster"
+        title="movie1"
       >
-        <LinkAnchor
-          href="/movies/movie1/movie1Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie1/movie1Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie1/movie1Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie1
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
+            <a
+              href="/movies/movie1/movie1Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie1Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie1Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
       <h3>
         genre2
       </h3>
-      <Link
+      <MovieDisplay
+        id="movie1Id"
         key="movie1Id"
-        to="/movies/movie1/movie1Id"
+        poster="movie1Poster"
+        title="movie1"
       >
-        <LinkAnchor
-          href="/movies/movie1/movie1Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie1/movie1Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie1/movie1Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie1
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
+            <a
+              href="/movies/movie1/movie1Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie1Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie1Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
       <h3>
         genre3
       </h3>
-      <Link
+      <MovieDisplay
+        id="movie2Id"
         key="movie2Id"
-        to="/movies/movie2/movie2Id"
+        poster="movie2Poster"
+        title="movie2"
       >
-        <LinkAnchor
-          href="/movies/movie2/movie2Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie2/movie2Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie2/movie2Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie2
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
+            <a
+              href="/movies/movie2/movie2Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie2Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie2Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
       <h3>
         genre4
       </h3>
-      <Link
+      <MovieDisplay
+        id="movie2Id"
         key="movie2Id"
-        to="/movies/movie2/movie2Id"
+        poster="movie2Poster"
+        title="movie2"
       >
-        <LinkAnchor
-          href="/movies/movie2/movie2Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie2/movie2Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie2/movie2Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie2
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
-      <Link
+            <a
+              href="/movies/movie2/movie2Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie2Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie2Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
+      <MovieDisplay
+        id="movie3Id"
         key="movie3Id"
-        to="/movies/movie3/movie3Id"
+        poster="movie3Poster"
+        title="movie3"
       >
-        <LinkAnchor
-          href="/movies/movie3/movie3Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie3/movie3Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie3/movie3Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie3
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
+            <a
+              href="/movies/movie3/movie3Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie3Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie3Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
       <h3>
         genre5
       </h3>
-      <Link
+      <MovieDisplay
+        id="movie3Id"
         key="movie3Id"
-        to="/movies/movie3/movie3Id"
+        poster="movie3Poster"
+        title="movie3"
       >
-        <LinkAnchor
-          href="/movies/movie3/movie3Id"
-          navigate={[Function]}
+        <Link
+          to="/movies/movie3/movie3Id"
         >
-          <a
+          <LinkAnchor
             href="/movies/movie3/movie3Id"
-            onClick={[Function]}
+            navigate={[Function]}
           >
-            <p>
-              movie3
-            </p>
-          </a>
-        </LinkAnchor>
-      </Link>
+            <a
+              href="/movies/movie3/movie3Id"
+              onClick={[Function]}
+            >
+              <styled.img
+                alt="Movie Display"
+                src="movie3Poster"
+              >
+                <img
+                  alt="Movie Display"
+                  className="sc-bdfBQB hxIEss"
+                  src="movie3Poster"
+                />
+              </styled.img>
+            </a>
+          </LinkAnchor>
+        </Link>
+      </MovieDisplay>
     </MoviesList>
   </Router>
 </BrowserRouter>

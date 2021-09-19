@@ -27,16 +27,19 @@ test("render the  home  page", async () => {
         title: "movie1",
         id: "movie1Id",
         genres: ["genre1", "genre2"],
+        poster: "movie1Poster",
       }),
       partialAs<Movie>({
         title: "movie2",
         id: "movie2Id",
         genres: ["genre3", "genre4"],
+        poster: "movie2Poster",
       }),
       partialAs<Movie>({
         title: "movie3",
         id: "movie3Id",
         genres: ["genre4", "genre5"],
+        poster: "movie3Poster",
       }),
     ])
   );
