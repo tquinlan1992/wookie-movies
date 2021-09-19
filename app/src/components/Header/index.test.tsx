@@ -13,13 +13,11 @@ test("Header", async () => {
   const onSearch = jest.fn();
   const history = createMemoryHistory();
   const wrapper = mount(
-    <SearchContext.Provider value={{ search: "", setSearch: onSearch }}>
-      <Router history={history}>
-        <Header />
-      </Router>
-    </SearchContext.Provider>
+    <Router history={history}>
+      <Header onSearch={onSearch} />
+    </Router>
   );
-  expect(toJson(wrapper.find(<Header />))).toMatchSnapshot();
+  expect(toJson(wrapper.find("Header"))).toMatchSnapshot();
   wrapper
     .find("input")
     .simulate("change", { target: { value: "new search value" } });

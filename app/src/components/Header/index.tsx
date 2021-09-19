@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { toPaths } from "../../pages/routes/paths";
-import SearchContext from "../../searchContext";
 import { useHistory } from "react-router-dom";
 
 const SearchForm = styled.form`
@@ -43,8 +42,9 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Header: React.FC = () => {
-  const { setSearch: onSearch } = useContext(SearchContext);
+const Header: React.FC<{ onSearch: (search: string) => void }> = ({
+  onSearch,
+}) => {
   const history = useHistory();
   const [searchInputValue, setSearchInputValue] = useState("");
   const onSearchInputChange = (search: string) => {

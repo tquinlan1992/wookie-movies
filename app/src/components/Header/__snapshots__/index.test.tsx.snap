@@ -1,3 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header 1`] = `null`;
+exports[`Header 1`] = `
+<Header
+  onSearch={[MockFunction]}
+>
+  <styled.div>
+    <div
+      className="sc-dlfnuX isAuYT"
+    >
+      <styled.div>
+        <div
+          className="sc-hKgJUU eSwVWB"
+        >
+          <styled.div>
+            <div
+              className="sc-gsTEea gEuHtg"
+            >
+              <Styled(Link)
+                to="/"
+              >
+                <Link
+                  className="sc-eCstlR eNpSIK"
+                  to="/"
+                >
+                  <LinkAnchor
+                    className="sc-eCstlR eNpSIK"
+                    href="/"
+                    navigate={[Function]}
+                  >
+                    <a
+                      className="sc-eCstlR eNpSIK"
+                      href="/"
+                      onClick={[Function]}
+                    >
+                      <span>
+                        Wookie 
+                        <br />
+                         Movies
+                      </span>
+                    </a>
+                  </LinkAnchor>
+                </Link>
+              </Styled(Link)>
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="sc-gsTEea gEuHtg"
+            >
+              <styled.form
+                onSubmit={[Function]}
+              >
+                <form
+                  className="sc-bdfBQB cmtwxi"
+                  onSubmit={[Function]}
+                >
+                  <input
+                    onChange={[Function]}
+                    value=""
+                  />
+                </form>
+              </styled.form>
+            </div>
+          </styled.div>
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</Header>
+`;

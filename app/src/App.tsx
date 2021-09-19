@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <SearchContext.Provider value={{ search, setSearch }}>
       <Router>
-        <Header />
+        <Header onSearch={setSearch} />
         <Routes />
       </Router>
     </SearchContext.Provider>
