@@ -1,3 +1,42 @@
+### Development
+
+Requirements: 
+ - node 14.17.2
+    - Can leverage the .nvmrc within `/app`
+- yarn@^1.22.11 
+
+The source code is within `/app`
+
+To install app dependencies
+- go into the app directory
+- install dependencies using yarn
+```
+cd app
+yarn install
+```
+
+To start locally:
+- go into the app directory
+- run the start script
+```
+cd app
+yarn start
+```
+To Test:
+- go into the app directory
+- run the test script
+```
+cd app
+yarn test
+```
+
+To Build: 
+- go into the app directory
+- run the test script
+```
+yarn build
+```
+
 ### Objective
 
 Your assignment is to implement a movie streaming dashboard using TypeScript and React.
