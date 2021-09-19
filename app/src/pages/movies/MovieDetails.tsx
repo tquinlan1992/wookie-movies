@@ -5,18 +5,42 @@ import styled from "styled-components";
 import { getMovies, Movie } from "../../api/movies";
 import PageWrapper from "../../components/PageWrapper";
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+const Column1 = styled.div`
+  width: 400px;
+  margin: auto;
+`;
+
+const Column2 = styled.div`
+  flex: 0 1 auto;
+  flex-wrap: wrap;
 `;
 
 const MovieDetailsColumns = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+const Poster = styled.img`
+  width: auto;
+  height: auto;
+  max-height: 500px;
+  display: block;
+  margin: auto;
+  padding-right: 20px;
+  @media (max-width: 800px) {
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+`;
+
+const Title = styled.div`
+  padding-bottom: 30px;
+  @media (max-width: 800px) {
+    text-align: center;
+  }
 `;
 
 const MovieDetails: React.FC = () => {
@@ -36,16 +60,37 @@ const MovieDetails: React.FC = () => {
     };
     retriveMovie();
   }, [title]);
-  return (
-    <PageWrapper>
-      <MovieDetailsColumns>
-        <Column>
-          <img src={movieData?.poster} alt="Poster" />
-        </Column>
-        <Column>MovieDetails: {movieData?.title}</Column>
-      </MovieDetailsColumns>
-    </PageWrapper>
-  );
+
+  if (!movieData) {
+    return null;
+  } else {
+    return (
+      <PageWrapper>
+        <MovieDetailsColumns>
+          <Column1>
+            <Poster src={movieData.poster} alt="Poster" />
+          </Column1>
+          <Column2>
+            <Title>
+              MovieDetails: {movieData.title} ({movieData.classification})
+            </Title>
+            <div>
+              <span>
+                {new Date(movieData.released_on).getFullYear()} |{" "}
+                {movieData.length} | {movieData.director}
+              </span>
+            </div>
+            <div>
+              <span>Cast: {movieData.cast.join(" ")}</span>
+            </div>
+            <div>
+              <p>Movie Description: {movieData.overview}</p>
+            </div>
+          </Column2>
+        </MovieDetailsColumns>
+      </PageWrapper>
+    );
+  }
 };
 
 export default MovieDetails;

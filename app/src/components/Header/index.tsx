@@ -18,7 +18,7 @@ const Column = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  padding: 15px;
+  padding: 15px 3% 15px 3%;
   border-bottom-style: solid;
   boder-bottom-color: black;
   border-bottom-width: 3px;

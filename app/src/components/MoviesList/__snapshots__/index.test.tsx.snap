@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List movie titles 1`] = `
+exports[`render movie titles 1`] = `
 <BrowserRouter>
   <Router
     history={

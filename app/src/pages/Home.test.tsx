@@ -20,7 +20,7 @@ function partialAs<Type>(input: Partial<Type>) {
   return input as Type;
 }
 
-test("List movie titles", async () => {
+test("render the  home  page", async () => {
   const getMoviesSpy = jest.spyOn(moviesApi, "getMovies").mockReturnValue(
     Promise.resolve([
       partialAs<Movie>({

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List movie titles 1`] = `
+exports[`render the  home  page 1`] = `
 <BrowserRouter>
   <Router
     history={
@@ -27,7 +27,7 @@ exports[`List movie titles 1`] = `
     <Home>
       <styled.div>
         <div
-          className="sc-bdfBQB eAxuQk"
+          className="sc-bdfBQB iNDsdm"
         >
           <MoviesList
             movies={

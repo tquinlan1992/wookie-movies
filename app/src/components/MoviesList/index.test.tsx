@@ -11,7 +11,7 @@ function partialAs<Type>(input: Partial<Type>) {
   return input as Type;
 }
 
-test("List movie titles", async () => {
+test("render movie titles", async () => {
   const movies = [
     partialAs<Movie>({
       title: "movie1",
