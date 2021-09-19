@@ -1,49 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header 1`] = `
-<Header>
-  <styled.div>
-    <div
-      className="sc-dlfnuX kTvNJn"
-    >
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Header>
       <styled.div>
         <div
-          className="sc-hKgJUU eSwVWB"
+          className="sc-dlfnuX kTvNJn"
         >
           <styled.div>
             <div
-              className="sc-gsTEea gEuHtg"
+              className="sc-hKgJUU eSwVWB"
             >
-              <span>
-                Wookie
-              </span>
-              <span>
-                Movies
-              </span>
-            </div>
-          </styled.div>
-          <styled.div>
-            <div
-              className="sc-gsTEea gEuHtg"
-            >
-              <styled.form
-                onSubmit={[Function]}
-              >
-                <form
-                  className="sc-bdfBQB cmtwxi"
-                  onSubmit={[Function]}
+              <styled.div>
+                <div
+                  className="sc-gsTEea gEuHtg"
                 >
-                  <input
-                    onChange={[Function]}
-                    value=""
-                  />
-                </form>
-              </styled.form>
+                  <Styled(Link)
+                    to="/"
+                  >
+                    <Link
+                      className="sc-eCstlR eNpSIK"
+                      to="/"
+                    >
+                      <LinkAnchor
+                        className="sc-eCstlR eNpSIK"
+                        href="/"
+                        navigate={[Function]}
+                      >
+                        <a
+                          className="sc-eCstlR eNpSIK"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <span>
+                            Wookie 
+                            <br />
+                             Movies
+                          </span>
+                        </a>
+                      </LinkAnchor>
+                    </Link>
+                  </Styled(Link)>
+                </div>
+              </styled.div>
+              <styled.div>
+                <div
+                  className="sc-gsTEea gEuHtg"
+                >
+                  <styled.form
+                    onSubmit={[Function]}
+                  >
+                    <form
+                      className="sc-bdfBQB cmtwxi"
+                      onSubmit={[Function]}
+                    >
+                      <input
+                        onChange={[Function]}
+                        value=""
+                      />
+                    </form>
+                  </styled.form>
+                </div>
+              </styled.div>
             </div>
           </styled.div>
         </div>
       </styled.div>
-    </div>
-  </styled.div>
-</Header>
+    </Header>
+  </Router>
+</BrowserRouter>
 `;

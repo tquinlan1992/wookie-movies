@@ -3,6 +3,7 @@ import Header from "./";
 import toJson from "enzyme-to-json";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import SearchContext from "../../searchContext";
+import { BrowserRouter as Router } from "react-router-dom";
 
 configure({ adapter: new Adapter() });
 
@@ -10,7 +11,9 @@ test("Header", async () => {
   const onSearch = jest.fn();
   const wrapper = mount(
     <SearchContext.Provider value={{ search: "", setSearch: onSearch }}>
-      <Header />
+      <Router>
+        <Header />
+      </Router>
     </SearchContext.Provider>
   );
   expect(toJson(wrapper)).toMatchSnapshot();

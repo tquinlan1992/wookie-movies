@@ -1,6 +1,6 @@
 export const paths = {
   HOME: "/",
-  MOVIE_DETAILS: `/movies/:movieTitle/:movieId`,
+  MOVIE_DETAILS: `/movies/:title/:id`,
 };
 
 export const toPaths = {

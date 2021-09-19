@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { toPaths } from "../../pages/routes/paths";
 import SearchContext from "../../searchContext";
+import { useHistory } from "react-router-dom";
 
 const SearchForm = styled.form`
   margin-top: auto;
@@ -28,22 +31,39 @@ const HeaderColumns = styled.div`
   width: 100%;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
 const Header: React.FC = () => {
   const { setSearch: onSearch } = useContext(SearchContext);
+  const history = useHistory();
   const [searchInputValue, setSearchInputValue] = useState("");
   const onSearchInputChange = (search: string) => {
     setSearchInputValue(search);
   };
   const performSearch: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+    history.push(toPaths.HOME());
     onSearch(searchInputValue);
   };
   return (
     <HeaderWrapper>
       <HeaderColumns>
         <Column>
-          <span>Wookie</span>
-          <span>Movies</span>
+          <StyledLink to={toPaths.HOME()}>
+            <span>
+              Wookie <br /> Movies
+            </span>
+          </StyledLink>
         </Column>
         <Column>
           <SearchForm onSubmit={performSearch}>

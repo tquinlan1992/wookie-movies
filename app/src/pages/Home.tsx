@@ -1,12 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
 import { getMovies, Movie } from "../api/movies";
 import MoviesList from "../components/MoviesList";
+import PageWrapper from "../components/PageWrapper";
 import SearchContext from "../searchContext";
-
-const PageWrapper = styled.div`
-  padding: 15px;
-`;
 
 const Home: React.FC = () => {
   const [movies, setMovies] = useState<Movie[]>([]);

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Routes from "./pages/routes";
@@ -8,8 +9,10 @@ const App: React.FC = () => {
   const [search, setSearch] = useState("");
   return (
     <SearchContext.Provider value={{ search, setSearch }}>
-      <Header />
-      <Routes />
+      <Router>
+        <Header />
+        <Routes />
+      </Router>
     </SearchContext.Provider>
   );
 };
