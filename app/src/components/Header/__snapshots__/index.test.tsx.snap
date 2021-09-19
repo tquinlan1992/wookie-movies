@@ -55,6 +55,11 @@ exports[`Header 1`] = `
                   className="sc-bdfBQB cmtwxi"
                   onSubmit={[Function]}
                 >
+                  <button
+                    type="submit"
+                  >
+                    Search
+                  </button>
                   <input
                     onChange={[Function]}
                     value=""

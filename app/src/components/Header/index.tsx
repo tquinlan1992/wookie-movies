@@ -67,6 +67,7 @@ const Header: React.FC<{ onSearch: (search: string) => void }> = ({
         </Column>
         <Column>
           <SearchForm onSubmit={performSearch}>
+            <button type="submit">Search</button>
             <input
               value={searchInputValue}
               onChange={(event) => onSearchInputChange(event.target.value)}
